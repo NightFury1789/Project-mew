@@ -9,7 +9,7 @@ resource "aws_instance" "web" {
   tags          = {
 env="dev"
 }
-
+}
 //local variable
 //locals {
  // common-tags = {
