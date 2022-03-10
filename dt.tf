@@ -6,15 +6,16 @@ resource "aws_instance" "web" {
   //instance_type = var.types["us-east-1"]
   instance_type = var.lists[1]
   //count         = var.flag == true ? 2 : 1
-  tags          = local.common-tags
+  tags          = {
+env="dev"
 }
 
 //local variable
-locals {
-  common-tags = {
-    own = "jphm"
-  }
-}
+//locals {
+ // common-tags = {
+  //  own = "jphm"
+ // }
+//}
 
 //List data-type
 variable "lists" {
